@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2018_10_03_043744) do
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
+ActiveRecord::Schema.define(version: 2018_10_04_011250) do
 
   create_table "authors", force: :cascade do |t|
     t.string "first_name"
@@ -37,6 +38,13 @@ ActiveRecord::Schema.define(version: 2018_10_03_043744) do
     t.string "title"
     t.datetime "date"
     t.integer "p_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "themes", force: :cascade do |t|
+    t.string "name"
+    t.integer "type_t"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
