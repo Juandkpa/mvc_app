@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  type_t.integer: MyString
+  type_t: 1
 
 two:
   name: MyString
-  type_t.integer: MyString
+  type_t: 1

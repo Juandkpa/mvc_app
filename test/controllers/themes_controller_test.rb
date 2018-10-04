@@ -17,7 +17,7 @@ class ThemesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create theme" do
     assert_difference('Theme.count') do
-      post themes_url, params: { theme: { name: @theme.name, type_t.integer: @theme.type_t.integer } }
+      post themes_url, params: { theme: { name: @theme.name, type_t: @theme.type_t } }
     end
 
     assert_redirected_to theme_url(Theme.last)
@@ -34,7 +34,7 @@ class ThemesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update theme" do
-    patch theme_url(@theme), params: { theme: { name: @theme.name, type_t.integer: @theme.type_t.integer } }
+    patch theme_url(@theme), params: { theme: { name: @theme.name, type_t: @theme.type_t } }
     assert_redirected_to theme_url(@theme)
   end
 

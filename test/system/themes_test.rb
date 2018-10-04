@@ -15,7 +15,7 @@ class ThemesTest < ApplicationSystemTestCase
     click_on "New Theme"
 
     fill_in "Name", with: @theme.name
-    fill_in "Type T.Integer", with: @theme.type_t.integer
+    fill_in "Type T", with: @theme.type_t
     click_on "Create Theme"
 
     assert_text "Theme was successfully created"
@@ -27,7 +27,7 @@ class ThemesTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Name", with: @theme.name
-    fill_in "Type T.Integer", with: @theme.type_t.integer
+    fill_in "Type T", with: @theme.type_t
     click_on "Update Theme"
 
     assert_text "Theme was successfully updated"

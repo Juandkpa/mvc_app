@@ -5,20 +5,29 @@ class ThemesController < ApplicationController
   # GET /themes.json
   def index
     @themes = Theme.all
+    @view = "themes/index"
+    render 'main/index'
   end
 
   # GET /themes/1
   # GET /themes/1.json
   def show
+    @view ='themes/show'
+    render  'main/index'
   end
 
   # GET /themes/new
   def new
     @theme = Theme.new
+    @view= 'themes/new'
+    render  'main/index'
   end
 
   # GET /themes/1/edit
   def edit
+    @author = Theme.find(params[:id])
+    @view = 'themes/edit'
+    render 'main/index'
   end
 
   # POST /themes
@@ -69,6 +78,6 @@ class ThemesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def theme_params
-      params.require(:theme).permit(:name, :type_t.integer)
+      params.require(:theme).permit(:name, :type_t)
     end
 end
