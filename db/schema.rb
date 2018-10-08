@@ -18,8 +18,7 @@ ActiveRecord::Schema.define(version: 2018_10_02_175409) do
     t.string "code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-  end
+  end  
 
   create_table "publications", force: :cascade do |t|
     t.string "code"
