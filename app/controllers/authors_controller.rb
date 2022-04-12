@@ -45,6 +45,7 @@ class AuthorsController < ApplicationController
       end
     end
   end
+  #este es un nuevo código 
 
   # PATCH/PUT /authors/1
   # PATCH/PUT /authors/1.json
